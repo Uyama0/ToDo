@@ -33,6 +33,7 @@ header .taskInput {
   border: 0;
   padding-left: 15px;
   font-size: 1.7rem;
+  color: black;
 }
 
 header h2 {
@@ -46,10 +47,16 @@ header h2:hover {
   cursor: pointer;
 }
 
-main {
+.taskList {
+  background: lightcoral;
+  width: 95%;
+  border-radius: 1rem;
+  margin: 10px;
+  height: 3.4rem;
 }
 
-main h3 {
-  display: flex;
-  padding: 10px 15px;
+.taskList .firstTask {
+  font-size: 1.7rem;
+  text-align: left;
+  padding: 10px;
 }
