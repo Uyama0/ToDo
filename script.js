@@ -1,9 +1,8 @@
-const taskInput = document.getElementsByClassName("taskInput");
-const taskList = document.getElementsByClassName("taskList");
+const taskInput = document.getElementById("taskInput");
+const tasks = document.getElementById("tasks");
 
-function addYask() {
-  if (taskInput.value == "") {
-    alert("Task can't be empty!");
-  } else {
-  }
+function addTask() {
+  let newTask = document.createElement("div");
+  newTask.innerHTML = taskInput.value;
+  tasks.appendChild(newTask);
 }
