@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+
     <title>ToDo</title>
   </head>
   <body>
     <div class="task">
       <header>
-        <input type="text" class="taskInput" />
-        <h2>TO DO</h2>
+        <input type="text" id="taskInput" placeholder="Your text" />
+        <h2 onclick="addTask()">TO DO</h2>
       </header>
       <main>
-        <div class="taskList">
-          <div class="firstTask">Task</div>
+        <div id="tasks">
+          <div class="taskList">dqw</div>
         </div>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

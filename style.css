@@ -26,7 +26,7 @@ header {
   padding: 10px;
 }
 
-header .taskInput {
+header #taskInput {
   width: 90%;
   border-radius: 1rem;
   outline: 0;
@@ -53,9 +53,6 @@ header h2:hover {
   border-radius: 1rem;
   margin: 10px;
   height: 3.4rem;
-}
-
-.taskList .firstTask {
   font-size: 1.7rem;
   text-align: left;
   padding: 10px;
