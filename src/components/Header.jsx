@@ -7,8 +7,11 @@ const hamburgerTransition = {
   open: { x: 0 },
   closed: { x: -432 },
 };
-function header() {
-  const [isOpen, setOpen] = useState(false);
+function header({ isOpen, setOpen }) {
+  function log() {
+    console.log("work");
+  }
+
   return (
     <header className="relative">
       <nav className="w-full absolute justify-between flex p-3 text-white">

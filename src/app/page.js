@@ -17,10 +17,16 @@ export default function Home() {
     }
   };
 
+  
   return (
-    <div className="h-screen flex justify-center flex-col ">
-      <div className="relative w-full ">
-        <Image src={Img} className="absolute w-full -z-10" />
+    <div className="h-screen flex justify-center flex-col">
+      <div className="relative w-full">
+        <Image
+          src={Img}
+          alt="masterhead"
+          priority
+          className="absolute w-full -z-10"
+        />
       </div>
       <div className="flex justify-center items-end h-screen">
         <div className="w-full h-[61%] md:h-[46%] bg-white rounded-t-3xl flex flex-col p-3">
@@ -35,12 +41,12 @@ export default function Home() {
               type="text"
               value={newTodo}
               onChange={(event) => setNewTodo(event.target.value)}
-              className="w-full h-full rounded-xl p-3"
+              className="w-full h-full rounded-xl p-3 border-[1px]"
             />
             <div className="flex justify-end items-end">
               <button
                 onClick={handleAddTodo}
-                className="rounded-[50%] justify-center flex items-center h-full w-[45.6px] text-2xl bg-white"
+                className="rounded-[50%] justify-center text-white flex items-center h-full w-[45.6px] text-2xl bg-blue-500"
               >
                 +
               </button>
