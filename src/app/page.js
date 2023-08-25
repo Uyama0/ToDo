@@ -17,6 +17,11 @@ export default function Home() {
     }
   };
 
+  const handleDeleteTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
   return (
     <div className="h-screen flex justify-center flex-col">
       <div className="relative w-full">
@@ -30,12 +35,17 @@ export default function Home() {
       <div className="flex justify-center items-end h-screen ">
         <div className="w-full h-[61%] md:h-[46%] border-2 bg-white rounded-t-3xl flex flex-col p-3">
           <div className="overflow-auto ">
-            <TodoList todos={todos} />
+            <TodoList
+              todos={todos}
+              key={todos.id}
+              onDelete={handleDeleteTodo}
+            />
           </div>
           <div className="flex-grow"></div>
           {/* input */}
           <div className="flex gap-3 my-5">
             <input
+              maxLength={30}
               placeholder="what's next?"
               type="text"
               value={newTodo}

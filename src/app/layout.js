@@ -26,7 +26,6 @@ const navTransition = {
 export default function RootLayout({ children }) {
   const [isOpen, setOpen] = useState(true);
 
-  console.log(isOpen);
   return (
     <html lang="en">
       <body className="flex justify-center">
@@ -51,8 +50,12 @@ export default function RootLayout({ children }) {
               x: -300,
             }}
             animate={isOpen ? "open" : "closed"}
-            className="absolute md:hidden h-screen w-[60%] bg-[#016ad8]"
-          ></motion.div>
+            className="absolute md:hidden h-screen w-[60%] bg-white"
+          >
+            <h1>
+              There could be a menu, but im bit bored with this project ^-^
+            </h1>
+          </motion.div>
         </AnimatePresence>
       </body>
     </html>
