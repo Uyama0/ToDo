@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Footer() {
-  const [isOpen, setOpen] = useState(false);
-
   return (
     <footer>
       <span className="bg-slate-200 w-full flex justify-center">
