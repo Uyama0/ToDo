@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 import TodoList from "@/components/TasksItems/TaskList";
+import Img from "@/assets/masterhead.png";
 
 export default function Home() {
   const [todos, setTodos] = useState([]);
@@ -16,10 +18,11 @@ export default function Home() {
   };
 
   return (
-    <div className="h-[calc(100vh-48px)]  flex justify-center flex-col bg-cyan-50">
-      <span className="flex-1 h-1/3 flex justify-center items-end p-3 text-3xl font-semibold">
-        Hello Uyama
-      </span>
+    <div className="h-[calc(100vh-48px)] flex justify-center flex-col">
+      <Image
+        src={Img}
+        className="flex-1 -mb-5 pb-10 flex justify-start items-end text-3xl font-semibold"
+      />
       <div className="h-2/3 bg-blue-300 rounded-t-3xl flex flex-col p-3">
         <div className="overflow-auto">
           <TodoList todos={todos} />
@@ -28,6 +31,7 @@ export default function Home() {
         {/* input */}
         <div className="flex gap-3 my-5">
           <input
+            placeholder="what's next?"
             type="text"
             value={newTodo}
             onChange={(event) => setNewTodo(event.target.value)}
@@ -36,7 +40,7 @@ export default function Home() {
           <div className="flex justify-end items-end">
             <button
               onClick={handleAddTodo}
-              className="rounded-[50%] justify-center flex items-center h-full w-[45.6px] bg-white text-2xl"
+              className="rounded-[50%] justify-center flex items-center h-full w-[45.6px] text-2xl   bg-white"
             >
               +
             </button>
