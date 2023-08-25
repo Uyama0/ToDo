@@ -22,7 +22,7 @@ function header({ isOpen, setOpen }) {
           Button
         </button>
         <span>Uyama</span>
-        <button>Theme</button>
+        {/* <button>Theme</button> */}
       </nav>
     </header>
   );
