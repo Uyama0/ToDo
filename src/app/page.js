@@ -17,7 +17,6 @@ export default function Home() {
     }
   };
 
-  
   return (
     <div className="h-screen flex justify-center flex-col">
       <div className="relative w-full">
@@ -28,9 +27,9 @@ export default function Home() {
           className="absolute w-full -z-10"
         />
       </div>
-      <div className="flex justify-center items-end h-screen">
-        <div className="w-full h-[61%] md:h-[46%] bg-white rounded-t-3xl flex flex-col p-3">
-          <div className="overflow-auto">
+      <div className="flex justify-center items-end h-screen ">
+        <div className="w-full h-[61%] md:h-[46%] border-2 bg-white rounded-t-3xl flex flex-col p-3">
+          <div className="overflow-auto ">
             <TodoList todos={todos} />
           </div>
           <div className="flex-grow"></div>

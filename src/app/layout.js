@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
               x: -300,
             }}
             animate={isOpen ? "open" : "closed"}
-            className="absolute h-screen w-[60%] bg-[#016ad8]"
+            className="absolute md:hidden h-screen w-[60%] bg-[#016ad8]"
           ></motion.div>
         </AnimatePresence>
       </body>
