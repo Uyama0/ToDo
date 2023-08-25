@@ -10,8 +10,8 @@ const hamburgerTransition = {
 function header() {
   const [isOpen, setOpen] = useState(false);
   return (
-    <header>
-      <nav className="w-full bg-slate-100 justify-between flex p-3">
+    <header className="relative">
+      <nav className="w-full absolute justify-between flex p-3 text-white">
         <button onClick={() => setOpen((isOpen) => !isOpen)}>Button</button>
         <span>Uyama</span>
         <button>Theme</button>
