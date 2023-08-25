@@ -16,21 +16,22 @@ export default function Home() {
   };
 
   return (
-    <div className="h-[calc(100vh-48px)] flex justify-center flex-col bg-cyan-50">
-      <div className="flex-1 flex justify-center items-end p-3 text-3xl font-semibold">
+    <div className="h-[calc(100vh-48px)]  flex justify-center flex-col bg-cyan-50">
+      <span className="flex-1 h-1/3 flex justify-center items-end p-3 text-3xl font-semibold">
         Hello Uyama
-      </div>
-      <div className="h-2/3 bg-blue-300 rounded-t-3xl p-3">
-        <div>hi</div>
-        <TodoList todos={todos} />
-
+      </span>
+      <div className="h-2/3 bg-blue-300 rounded-t-3xl flex flex-col p-3">
+        <div className="overflow-auto">
+          <TodoList todos={todos} />
+        </div>
+        <div className="flex-grow"></div>
         {/* input */}
-        <div className="flex gap-3">
+        <div className="flex gap-3 my-5">
           <input
+            type="text"
             value={newTodo}
             onChange={(event) => setNewTodo(event.target.value)}
-            type="text"
-            className="w-full h-full rounded-3xl p-3"
+            className="w-full h-full rounded-xl p-3"
           ></input>
           <div className="flex justify-end items-end">
             <button
